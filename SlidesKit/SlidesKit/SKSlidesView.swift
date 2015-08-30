@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal enum SKSlidesContentType{
+internal enum SKSlidesViewContentType {
     case PPT
     case PDF
 }
@@ -17,45 +17,50 @@ public class SKSlidesView: UIView {
 
     private var viewsFrame : CGRect {
         get{
-            return CGRectMake(0, 0, frame.width, frame.height)
+            return CGRectMake(0, 0, 200, 150)
         }
     }
     private var baseView : SKBaseSlidesView!
     private var coverView : UIView!
-    private var contentType : SKSlidesContentType = .PDF {
+    private var contentType : SKSlidesViewContentType = .PDF {
         didSet{
             if oldValue != contentType {
-                if contentType == .PDF {
-                    self.baseView = SKPDFSlidesView(frame: frame)
-                } else {
-                    self.baseView = SKPPTSlidesView(frame: frame)
-                }
-                self.addSubview(baseView.view)
-                bringSubviewToFront(coverView)
+                newBaseView(contentType)
             }
         }
     }
     
     public var delegate : SKSlidesViewDelegate?
 
-    
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        initComponents()
     }
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        initComponents()
+    }
+    private func initComponents() {
+        coverView = UIView(frame: viewsFrame)
+        addSubview(coverView)
+        paddedWithView(coverView)
+        newBaseView(.PDF)
+    }
+    private func newBaseView(type : SKSlidesViewContentType) {
+        //  remove old baseView
+        if baseView != nil {
+            baseView.view.removeFromSuperview()
+        }
+        //  init new baseView
+        baseView = type == .PDF ? SKPDFSlidesView(frame: viewsFrame) : SKPPTSlidesView(frame: viewsFrame)
+        //  add to mainView
+        addSubview(baseView.view)
+        //  pad mainView
+        paddedWithView(baseView.view)
+        //  bring up coverView
+        bringSubviewToFront(coverView)
     }
     public func load(filePath : String) {
-        
-        //  for the first time
-        if baseView == nil {
-            baseView = SKPDFSlidesView(frame: viewsFrame)
-            addSubview(baseView.view)
-        }
-        if coverView == nil {
-            coverView = UIView(frame: viewsFrame)
-            addSubview(coverView)
-        }
         
         if filePath.slidesExist() {
             if filePath.uppercaseString.hasSuffix("PDF") {
