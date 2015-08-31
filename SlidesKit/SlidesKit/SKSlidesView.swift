@@ -21,7 +21,6 @@ public class SKSlidesView: UIView {
         }
     }
     private var baseView : SKBaseSlidesView!
-    private var coverView : UIView!
     private var contentType : SKSlidesViewContentType = .PDF {
         didSet{
             if oldValue != contentType {
@@ -41,9 +40,7 @@ public class SKSlidesView: UIView {
         initComponents()
     }
     private func initComponents() {
-        coverView = UIView(frame: viewsFrame)
-        addSubview(coverView)
-        paddedWithView(coverView)
+        userInteractionEnabled = false
         newBaseView(.PDF)
     }
     private func newBaseView(type : SKSlidesViewContentType) {
@@ -57,8 +54,6 @@ public class SKSlidesView: UIView {
         addSubview(baseView.view)
         //  pad mainView
         paddedWithView(baseView.view)
-        //  bring up coverView
-        bringSubviewToFront(coverView)
     }
     public func load(filePath : String) {
         
