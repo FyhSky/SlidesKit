@@ -78,17 +78,21 @@ public class SKSlidesView: UIView {
         delegate?.slidesDidLoad(self)
     }
     
+    public func gotoPage(pageNumber : Int) {
+        baseView.gotoPage(pageNumber)
+    }
+    
     public func nextPage(){
-        baseView.gotoPage(baseView.currentPage + 1)
+        gotoPage(baseView.currentPage + 1)
     }
     public func prevPage(){
-        baseView.gotoPage(baseView.currentPage - 1)
+        gotoPage(baseView.currentPage - 1)
     }
     public func firstPage(){
-        baseView.gotoPage(1)
+        gotoPage(1)
     }
     public func finalPage(){
-        baseView.gotoPage(baseView.numberOfPages)
+        gotoPage(baseView.numberOfPages)
     }
 
     
