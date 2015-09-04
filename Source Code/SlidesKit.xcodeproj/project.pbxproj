@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12DD43E1B994F3700FCF886 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD4331B994F3700FCF886 /* Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD43F1B994F3700FCF886 /* SKBaseSlidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD4341B994F3700FCF886 /* SKBaseSlidesView.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD4401B994F3700FCF886 /* SKCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD4351B994F3700FCF886 /* SKCache.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD4411B994F3700FCF886 /* SKCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD4361B994F3700FCF886 /* SKCacheManager.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD4421B994F3700FCF886 /* SKCacheManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD4371B994F3700FCF886 /* SKCacheManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD4431B994F3700FCF886 /* SKInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD4381B994F3700FCF886 /* SKInfo.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD4441B994F3700FCF886 /* SKPDFSlidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD4391B994F3700FCF886 /* SKPDFSlidesView.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD4451B994F3700FCF886 /* SKPPTSlidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD43A1B994F3700FCF886 /* SKPPTSlidesView.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD4461B994F3700FCF886 /* SKSlidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD43B1B994F3700FCF886 /* SKSlidesView.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD4471B994F3700FCF886 /* SKSlidesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD43C1B994F3700FCF886 /* SKSlidesViewDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		A12DD4481B994F3700FCF886 /* SKStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12DD43D1B994F3700FCF886 /* SKStandard.swift */; settings = {ASSET_TAGS = (); }; };
 		A138271B1B920B0100AC33B0 /* SlidesKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A138271A1B920B0100AC33B0 /* SlidesKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A138272E1B920B4000AC33B0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13827231B920B4000AC33B0 /* Extension.swift */; settings = {ASSET_TAGS = (); }; };
-		A138272F1B920B4000AC33B0 /* SKBaseSlidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13827241B920B4000AC33B0 /* SKBaseSlidesView.swift */; settings = {ASSET_TAGS = (); }; };
-		A13827301B920B4000AC33B0 /* SKCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13827251B920B4000AC33B0 /* SKCache.swift */; settings = {ASSET_TAGS = (); }; };
-		A13827311B920B4000AC33B0 /* SKCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13827261B920B4000AC33B0 /* SKCacheManager.swift */; settings = {ASSET_TAGS = (); }; };
-		A13827321B920B4000AC33B0 /* SKCacheManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13827271B920B4000AC33B0 /* SKCacheManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		A13827331B920B4000AC33B0 /* SKInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13827281B920B4000AC33B0 /* SKInfo.swift */; settings = {ASSET_TAGS = (); }; };
-		A13827341B920B4000AC33B0 /* SKPDFSlidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13827291B920B4000AC33B0 /* SKPDFSlidesView.swift */; settings = {ASSET_TAGS = (); }; };
-		A13827351B920B4000AC33B0 /* SKPPTSlidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A138272A1B920B4000AC33B0 /* SKPPTSlidesView.swift */; settings = {ASSET_TAGS = (); }; };
-		A13827361B920B4000AC33B0 /* SKSlidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A138272B1B920B4000AC33B0 /* SKSlidesView.swift */; settings = {ASSET_TAGS = (); }; };
-		A13827371B920B4000AC33B0 /* SKSlidesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A138272C1B920B4000AC33B0 /* SKSlidesViewDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		A13827381B920B4000AC33B0 /* SKStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A138272D1B920B4000AC33B0 /* SKStandard.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A12DD4331B994F3700FCF886 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A12DD4341B994F3700FCF886 /* SKBaseSlidesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseSlidesView.swift; sourceTree = "<group>"; };
+		A12DD4351B994F3700FCF886 /* SKCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCache.swift; sourceTree = "<group>"; };
+		A12DD4361B994F3700FCF886 /* SKCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCacheManager.swift; sourceTree = "<group>"; };
+		A12DD4371B994F3700FCF886 /* SKCacheManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCacheManagerDelegate.swift; sourceTree = "<group>"; };
+		A12DD4381B994F3700FCF886 /* SKInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKInfo.swift; sourceTree = "<group>"; };
+		A12DD4391B994F3700FCF886 /* SKPDFSlidesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPDFSlidesView.swift; sourceTree = "<group>"; };
+		A12DD43A1B994F3700FCF886 /* SKPPTSlidesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPPTSlidesView.swift; sourceTree = "<group>"; };
+		A12DD43B1B994F3700FCF886 /* SKSlidesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSlidesView.swift; sourceTree = "<group>"; };
+		A12DD43C1B994F3700FCF886 /* SKSlidesViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSlidesViewDelegate.swift; sourceTree = "<group>"; };
+		A12DD43D1B994F3700FCF886 /* SKStandard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKStandard.swift; sourceTree = "<group>"; };
 		A13827171B920B0100AC33B0 /* SlidesKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlidesKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A138271A1B920B0100AC33B0 /* SlidesKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlidesKit.h; sourceTree = "<group>"; };
 		A138271C1B920B0100AC33B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A13827231B920B4000AC33B0 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		A13827241B920B4000AC33B0 /* SKBaseSlidesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseSlidesView.swift; sourceTree = "<group>"; };
-		A13827251B920B4000AC33B0 /* SKCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCache.swift; sourceTree = "<group>"; };
-		A13827261B920B4000AC33B0 /* SKCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCacheManager.swift; sourceTree = "<group>"; };
-		A13827271B920B4000AC33B0 /* SKCacheManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCacheManagerDelegate.swift; sourceTree = "<group>"; };
-		A13827281B920B4000AC33B0 /* SKInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKInfo.swift; sourceTree = "<group>"; };
-		A13827291B920B4000AC33B0 /* SKPDFSlidesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPDFSlidesView.swift; sourceTree = "<group>"; };
-		A138272A1B920B4000AC33B0 /* SKPPTSlidesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPPTSlidesView.swift; sourceTree = "<group>"; };
-		A138272B1B920B4000AC33B0 /* SKSlidesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSlidesView.swift; sourceTree = "<group>"; };
-		A138272C1B920B4000AC33B0 /* SKSlidesViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSlidesViewDelegate.swift; sourceTree = "<group>"; };
-		A138272D1B920B4000AC33B0 /* SKStandard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKStandard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A12DD4321B994F3700FCF886 /* SlidesKit */ = {
+			isa = PBXGroup;
+			children = (
+				A12DD4331B994F3700FCF886 /* Extension.swift */,
+				A12DD4341B994F3700FCF886 /* SKBaseSlidesView.swift */,
+				A12DD4351B994F3700FCF886 /* SKCache.swift */,
+				A12DD4361B994F3700FCF886 /* SKCacheManager.swift */,
+				A12DD4371B994F3700FCF886 /* SKCacheManagerDelegate.swift */,
+				A12DD4381B994F3700FCF886 /* SKInfo.swift */,
+				A12DD4391B994F3700FCF886 /* SKPDFSlidesView.swift */,
+				A12DD43A1B994F3700FCF886 /* SKPPTSlidesView.swift */,
+				A12DD43B1B994F3700FCF886 /* SKSlidesView.swift */,
+				A12DD43C1B994F3700FCF886 /* SKSlidesViewDelegate.swift */,
+				A12DD43D1B994F3700FCF886 /* SKStandard.swift */,
+			);
+			path = SlidesKit;
+			sourceTree = "<group>";
+		};
 		A138270D1B920B0100AC33B0 = {
 			isa = PBXGroup;
 			children = (
@@ -68,27 +86,9 @@
 		A13827191B920B0100AC33B0 /* SlidesKit */ = {
 			isa = PBXGroup;
 			children = (
-				A13827221B920B4000AC33B0 /* SlidesKit */,
+				A12DD4321B994F3700FCF886 /* SlidesKit */,
 				A138271A1B920B0100AC33B0 /* SlidesKit.h */,
 				A138271C1B920B0100AC33B0 /* Info.plist */,
-			);
-			path = SlidesKit;
-			sourceTree = "<group>";
-		};
-		A13827221B920B4000AC33B0 /* SlidesKit */ = {
-			isa = PBXGroup;
-			children = (
-				A13827231B920B4000AC33B0 /* Extension.swift */,
-				A138272D1B920B4000AC33B0 /* SKStandard.swift */,
-				A13827281B920B4000AC33B0 /* SKInfo.swift */,
-				A13827251B920B4000AC33B0 /* SKCache.swift */,
-				A13827261B920B4000AC33B0 /* SKCacheManager.swift */,
-				A13827271B920B4000AC33B0 /* SKCacheManagerDelegate.swift */,
-				A13827241B920B4000AC33B0 /* SKBaseSlidesView.swift */,
-				A13827291B920B4000AC33B0 /* SKPDFSlidesView.swift */,
-				A138272A1B920B4000AC33B0 /* SKPPTSlidesView.swift */,
-				A138272B1B920B4000AC33B0 /* SKSlidesView.swift */,
-				A138272C1B920B4000AC33B0 /* SKSlidesViewDelegate.swift */,
 			);
 			path = SlidesKit;
 			sourceTree = "<group>";
@@ -171,17 +171,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A13827321B920B4000AC33B0 /* SKCacheManagerDelegate.swift in Sources */,
-				A13827351B920B4000AC33B0 /* SKPPTSlidesView.swift in Sources */,
-				A13827361B920B4000AC33B0 /* SKSlidesView.swift in Sources */,
-				A13827371B920B4000AC33B0 /* SKSlidesViewDelegate.swift in Sources */,
-				A13827381B920B4000AC33B0 /* SKStandard.swift in Sources */,
-				A13827311B920B4000AC33B0 /* SKCacheManager.swift in Sources */,
-				A138272E1B920B4000AC33B0 /* Extension.swift in Sources */,
-				A13827341B920B4000AC33B0 /* SKPDFSlidesView.swift in Sources */,
-				A13827331B920B4000AC33B0 /* SKInfo.swift in Sources */,
-				A138272F1B920B4000AC33B0 /* SKBaseSlidesView.swift in Sources */,
-				A13827301B920B4000AC33B0 /* SKCache.swift in Sources */,
+				A12DD4421B994F3700FCF886 /* SKCacheManagerDelegate.swift in Sources */,
+				A12DD4451B994F3700FCF886 /* SKPPTSlidesView.swift in Sources */,
+				A12DD4461B994F3700FCF886 /* SKSlidesView.swift in Sources */,
+				A12DD4471B994F3700FCF886 /* SKSlidesViewDelegate.swift in Sources */,
+				A12DD4481B994F3700FCF886 /* SKStandard.swift in Sources */,
+				A12DD4411B994F3700FCF886 /* SKCacheManager.swift in Sources */,
+				A12DD43E1B994F3700FCF886 /* Extension.swift in Sources */,
+				A12DD4441B994F3700FCF886 /* SKPDFSlidesView.swift in Sources */,
+				A12DD4431B994F3700FCF886 /* SKInfo.swift in Sources */,
+				A12DD43F1B994F3700FCF886 /* SKBaseSlidesView.swift in Sources */,
+				A12DD4401B994F3700FCF886 /* SKCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -70,7 +70,7 @@ public class SKSlidesView: UIView {
     }
     
     private func slidesDidLoad() {
-        delegate?.slidesDidLoad(self)
+        delegate?.slidesViewDidFinishLoad(self)
     }
     
     public func gotoPage(pageNumber : Int) {

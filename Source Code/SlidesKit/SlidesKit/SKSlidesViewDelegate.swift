@@ -9,5 +9,5 @@
 import UIKit
 
 public protocol SKSlidesViewDelegate{
-    func slidesDidLoad(slidesView : SKSlidesView)
+    func slidesViewDidFinishLoad(slidesView : SKSlidesView)
 }
