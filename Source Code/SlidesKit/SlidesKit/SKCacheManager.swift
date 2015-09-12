@@ -21,7 +21,7 @@ public class SKCacheManager: NSObject, UIWebViewDelegate {
             return _dirPath
         }
     }
-    private var dirCache : SKCache!
+    private var sharedCache = SKCache.sharedCache
     private var waitlist : [SKInfo]!
     private var resultList : [SKInfo]!
     private var totalWorkLoad : Int = 0
@@ -72,7 +72,6 @@ public class SKCacheManager: NSObject, UIWebViewDelegate {
         reset()
         if dirPath.dirExist() {
             _dirPath = dirPath
-            dirCache = SKCache(dirPath: dirPath)
             totalWorkLoad = scanDir(scanAll: mode == .rebuilding)
             runList()
         } else {
@@ -87,7 +86,7 @@ public class SKCacheManager: NSObject, UIWebViewDelegate {
         while let element = dirPathEnum?.nextObject() as? String {
             if element.hasSlidesExtension() {
                 if !scanAllOptionOn {
-                    if let fileCache = dirCache.cacheOut(element) {
+                    if let fileCache = sharedCache.cacheOut(dirPath, fileName: element) {
                         let info = SKInfo(dirPath: dirPath, fileName: element)
                         info.setNumberOfPageAndThumbnail(fileCache.numberOfPage, thumbnail: fileCache.thumbnail)
                         resultList.append(info)
@@ -118,7 +117,7 @@ public class SKCacheManager: NSObject, UIWebViewDelegate {
             }
         } else {
             //  store cache
-            dirCache.store()
+            sharedCache.store()
             //  fire complete callback
             if mode == SKCacheManagerMode.retrieving {
                 delegate?.retrievalDidFinish?(self, cache: resultList)
@@ -129,7 +128,7 @@ public class SKCacheManager: NSObject, UIWebViewDelegate {
     }
     
     private func moveToResultList() {
-        dirCache.cacheIn(firstOnList)
+        sharedCache.cacheIn(firstOnList)
         resultList.append(firstOnList)
         waitlist.removeFirst()
         if mode == SKCacheManagerMode.retrieving {

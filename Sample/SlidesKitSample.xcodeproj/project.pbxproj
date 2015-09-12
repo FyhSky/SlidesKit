@@ -10,7 +10,6 @@
 		A125EA331B9659A3004282B8 /* sample1.pptx in Resources */ = {isa = PBXBuildFile; fileRef = A125EA2F1B9659A3004282B8 /* sample1.pptx */; settings = {ASSET_TAGS = (); }; };
 		A125EA341B9659A3004282B8 /* sample2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A125EA301B9659A3004282B8 /* sample2.pdf */; settings = {ASSET_TAGS = (); }; };
 		A125EA351B9659A3004282B8 /* sample3.pptx in Resources */ = {isa = PBXBuildFile; fileRef = A125EA311B9659A3004282B8 /* sample3.pptx */; settings = {ASSET_TAGS = (); }; };
-		A12DD44A1B994FEB00FCF886 /* SlidesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12DD4491B994FEB00FCF886 /* SlidesKit.framework */; settings = {ASSET_TAGS = (); }; };
 		A12DD44B1B99512400FCF886 /* SlidesKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A12DD4491B994FEB00FCF886 /* SlidesKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A12DD44D1B99558A00FCF886 /* shake.png in Resources */ = {isa = PBXBuildFile; fileRef = A12DD44C1B99558A00FCF886 /* shake.png */; settings = {ASSET_TAGS = (); }; };
 		A13F1EDB1B97E8D800064F68 /* SlidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1EDA1B97E8D800064F68 /* SlidesViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -56,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12DD44A1B994FEB00FCF886 /* SlidesKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

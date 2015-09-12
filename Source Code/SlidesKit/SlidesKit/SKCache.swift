@@ -9,22 +9,22 @@
 import UIKit
 
 internal class SKCache: NSObject {
-    private var _dirPath : String!
-    internal var dirPath : String {
-        get{
-            return _dirPath
-        }
-    }
+
     private var cachePath : String {
         get{
-            return _dirPath.stringByAppendingPathComponent("cache")
+            return NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)[0].stringByAppendingPathComponent("slidesCache")
         }
     }
-    private var dirCache = [String : [String : AnyObject]]()
-    internal init(dirPath : String){
+    private var cache = [String : [String : [String : AnyObject]]]()
+    private override init(){
         super.init()
-        self._dirPath = dirPath
         load()
+    }
+    
+    internal static var sharedCache : SKCache {
+        get{
+            return SKCache()
+        }
     }
     
     private func load() {
@@ -32,7 +32,7 @@ internal class SKCache: NSObject {
             let jsonStr = try String(contentsOfFile: cachePath, encoding: NSUTF8StringEncoding)
             let jsonData = jsonStr.dataUsingEncoding(NSUTF8StringEncoding)
             let jsonObject = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.AllowFragments)
-            dirCache = jsonObject as! [String : [String : AnyObject]]
+            cache = jsonObject as! [String : [String : [String : AnyObject]]]
         } catch let error as NSError {
             print(error)
         }
@@ -40,7 +40,7 @@ internal class SKCache: NSObject {
     
     internal func store() {
         do{
-            let jsonData = try NSJSONSerialization.dataWithJSONObject(dirCache, options: NSJSONWritingOptions.PrettyPrinted)
+            let jsonData = try NSJSONSerialization.dataWithJSONObject(cache, options: NSJSONWritingOptions.PrettyPrinted)
             let jsonStr = NSString(data: jsonData, encoding: NSUTF8StringEncoding)
             try jsonStr?.writeToFile(cachePath, atomically: true, encoding: NSUTF8StringEncoding)
         } catch let error as NSError {
@@ -48,21 +48,25 @@ internal class SKCache: NSObject {
         }
     }
     
-    internal func cacheOut(fileName : String) -> (numberOfPage : Int, thumbnail : UIImage)? {
-        if let result = dirCache[fileName] {
-            let numberOfPage = result["numberOfPages"] as! Int
-            let thumbnail = ((result["thumbnail"] as! String).getImageFromBase64String())!
-            return (numberOfPage, thumbnail)
+    internal func cacheOut(dirPath : String, fileName : String) -> (numberOfPage : Int, thumbnail : UIImage)? {
+        if let result = cache[dirPath] {
+            if let result = result[fileName] {
+                let numberOfPage = result["numberOfPages"] as! Int
+                let thumbnail = ((result["thumbnail"] as! String).getImageFromBase64String())!
+                return (numberOfPage, thumbnail)
+            }
         }
-        else {
-            return nil
-        }
+        return nil
     }
     
     internal func cacheIn(info : SKInfo) {
+        let dirPath = info.dirPath
         let fileName = info.fileName
-        dirCache[fileName] = [String : AnyObject]()
-        dirCache[fileName]!["numberOfPages"] = info.numberOfPages
-        dirCache[fileName]!["thumbnail"] = info.thumbnail.base64Str
+        if cache[dirPath] == nil {
+            cache[dirPath] = [String : [String : AnyObject]]()
+        }
+        cache[dirPath]![fileName] = [String : AnyObject]()
+        cache[dirPath]![fileName]!["numberOfPages"] = info.numberOfPages
+        cache[dirPath]![fileName]!["thumbnail"] = info.thumbnail.base64Str
     }
 }
