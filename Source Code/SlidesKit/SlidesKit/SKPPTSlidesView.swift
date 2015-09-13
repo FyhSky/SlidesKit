@@ -48,7 +48,7 @@ internal class SKPPTSlidesView: UIWebView, UIWebViewDelegate, SKBaseSlidesView {
         self.removePageGap()
         _currentPage = 1
         _numberOfPages = webView.getNumberOfPages()
-        thumbnail = webView.getScreenshot().resize(SKStandard.thumbnailSize)
+        thumbnail = webView.getScreenshot().resize(withNewSize: SKStandard.thumbnailSize)
         updateCache()
         slidesDidLoad?()
     }

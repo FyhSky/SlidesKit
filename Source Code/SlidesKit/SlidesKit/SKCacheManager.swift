@@ -106,7 +106,7 @@ public class SKCacheManager: NSObject, UIWebViewDelegate {
             if firstOnList.type == "PDF" {
                 if let pdf = CGPDFDocumentCreateWithURL(NSURL(fileURLWithPath: firstOnList.filePath)) {
                     //  set cache info
-                    firstOnList.setNumberOfPageAndThumbnail(pdf.numberOfPages, thumbnail: pdf.getPageImage(1)!.resize(SKStandard.thumbnailSize))
+                    firstOnList.setNumberOfPageAndThumbnail(pdf.numberOfPages, thumbnail: pdf.getPageImage(1)!.resize(withNewSize: SKStandard.thumbnailSize))
                     moveToResultList()
                 } else {
                     /*  Do nothing  */
