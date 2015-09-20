@@ -1,3 +1,5 @@
+# This Repo is not going update here
+# Find SlidesKit in https://github.com/fullstackpug/OpenKit
 # SlidesKit (v0.1)
 Slides is framework that allows you to control presentation slides files(.ppt, .pptx, .pdf) in iOS easily. One major component is SKSlidesView, it it a subclass of UIView. You could use it to display and control slides. Another major component is SKCacheManager, and it helps you to get metadata of all slides in the specified directory.
 <br>
